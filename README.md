@@ -1,5 +1,7 @@
 ﻿# Inferno-Launcher
 
-Dawn Of Change, Burning Ground Launcher
+Dawn Of Change Lobby Client //Burning Ground Launcher
 
-Copyright 2016
+Build with Electron
+
+Copyright 2016-2017
