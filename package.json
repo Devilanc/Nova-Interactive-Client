@@ -1,0 +1,39 @@
+{
+    "name" : "NovaClient",
+    "version" : "0.17.3",
+    "description": "Dawn of Change Lobby Client",
+    "main" : "main.js",
+    "productName": "Nova Client",
+    "private": true,
+    "author": {
+        "name": "DearMin",
+        "email" : "audi6998@naver.com"
+    },
+    "scripts": {
+        "start": "electron .",
+        "build:pack": "build",
+        "build:publish": "build --publish always",
+        "release": "build"
+    },
+    "dependencies": {
+        "electron-auto-updater": "0.6.2",
+        "jquery": "^2.1.4"
+    },
+    "build":{
+      "appId": "NovaClient",
+      "productName": "Nova Client",
+      "files":[
+        "app/**/*",
+        "node_modules/**/*",
+        "package.json"
+      ],
+      "publish":{
+        "provider": "github"
+      },
+      "win":{
+        "publish":["github"],
+        "remoteReleases": "https://github.com/Dear-Min/NovaClient/"
+      }
+    },
+    "registry" : "http://overlightnotes.pe.hu/bg/www/launcher:4873"
+}
