@@ -1,6 +1,6 @@
 ﻿# Nova Client
 
-v0.17.3.542
+v1.1.0.674
 
 Dawn Of Change Lobby Client
 
