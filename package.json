@@ -1,6 +1,6 @@
 {
     "name" : "NovaClient",
-    "version" : "1.1.674",
+    "version" : "1.1.683",
     "description": "Dawn of Change Lobby Client",
     "main" : "main.js",
     "productName": "Nova Client",
