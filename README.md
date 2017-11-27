@@ -1,8 +1,8 @@
-﻿# Nova Client
+﻿# Nova Client (  )
 
-v1.1.0.674
+v1.4.0.873
 
-Dawn Of Change Lobby Client
+Nova Interactive Game Lobby Client
 
 Build with Electron
 
