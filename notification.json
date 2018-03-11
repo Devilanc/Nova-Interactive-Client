@@ -1,21 +1,11 @@
 {
-  "status": "online",
-  "icon_view": "1",
+  "status": "online or maint",
+  "icon_view": "0 or 1",
   "notifications": [
   {
-  "id": "1",
-  "title": "로비 페이지&업데이트",
-  "description": "현재 접속이 불가능한 현상이 발생해 원인을 파악하고 있습니다."
-  },
-  {
-  "id": "2",
-  "title": "스테이시스 마인",
-  "description": "스테이시스 마인이 생성되면 게임이 비정상 종료되는 문제가 확인되어 원인을 파악하고 있습니다."
-  },
-  {
-  "id": "3",
-  "title": "2.0",
-  "description": "6월 14일 (수) 오전 12시부터 게임 업데이트를 위한 서버 점검이 이루어질 예정입니다. 점검은 약 3시간 정도 소요될것으로 보입니다."
+  "id": "",
+  "title": "",
+  "description": ""
   }
 ]
 }
