@@ -1,9 +1,7 @@
-﻿# Nova Client (  )
+﻿# Nova Client (v1 Beta)
 
-v1.4.0.873
-
-Nova Interactive Game Lobby Client
+Nova Interactive Game&Social Client
 
 Build with Electron
 
-Copyright 2016-2017
+Copyright 2016-2018
