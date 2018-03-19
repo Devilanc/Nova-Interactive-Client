@@ -42,6 +42,7 @@ table {
 	border-spacing: 0;
 }
 
+
 #client-spinner {position: absolute; top: 30%; left: 40%; width: 40px; height: 40px; text-align: center;}
 
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -57,16 +58,15 @@ html {font-family: 'RixGoM'; overflow: hidden; -webkit-animation: fadein 3s; /* 
 /* Opera < 12.1 */
 @-o-keyframes fadein {from { opacity: 0; } to{ opacity: 1; }}
 html::-webkit-scrollbar {width: 0; border: 3px solid transparent;}
-        body {margin: 0;}
-        a {text-decoration: none;}
-        .article-container {height: 100vh;  overflow: hidden;  background-attachment: fixed; background-size: cover; font-family: 'RixGoM', sans-serif; font-weight: 200; }
-        .landing-gradient {width: 100%; height: 100%; position: absolute; z-index: 1; background-image: url(../Images/gradient-landing.png); background-size: cover;}
-        .article-clfix{position: fixed; top: 10%; left: 3%; z-index: 2;}
-        .rolling-ico {color: #d3d3d3; padding-right: 25px; font-size:13px;}
-				.article-container.a1 { background-repeat: no-repeat; background-image: url(../Images/title.gif); background-size: 100% 100%;}
-        .article-container.a2 {background-image: url(../Images/landing1.jpg);}
-        .article-container.a3 {background-image: url(../Images/landing3.jpg);}
-        .article-container header {color: #d3d3d3; max-width: 30%; position: relative; left: 85%; top: 40%; transform: translateX(-50%) translateY(-50%); font-size: 0.9rem; text-align: center; z-index: 2;}
-        .descript {color: grey; max-width: 80%; position: relative; left: 80%; bottom: 90%; transform: translateX(-50%) translateY(-50%); text-align: center;}
-        .article-container header h1 {font-size: 2.3rem; margin-bottom: 1rem; font-weight: 300;}
-        .article-container header h1:after {content:''; border-bottom: 1px solid #d3d3d3; width: 10rem; display: block; margin: auto; padding: 5px;}
+
+body {margin: 0;}
+a {text-decoration: none;}
+.article-container {height: 100vh;  overflow: hidden;  background-attachment: fixed; background-size: cover; font-family: 'RixGoM', sans-serif; font-weight: 200; }
+.landing-gradient {width: 100%; height: 100%; position: absolute; z-index: 1; background-image: url(../Images/gradient-landing.png); background-size: cover;}
+.article-clfix{position: fixed; top: 10%; left: 3%; z-index: 2;}
+
+.article-container.a1 { background-repeat: no-repeat; background-image: url(../Images/title.gif); background-size: 100% 100%;}
+.article-container header {color: #d3d3d3; max-width: 30%; position: relative; left: 85%; top: 40%; transform: translateX(-50%) translateY(-50%); font-size: 0.9rem; text-align: center; z-index: 2;}
+.descript {color: grey; max-width: 80%; position: relative; left: 80%; bottom: 90%; transform: translateX(-50%) translateY(-50%); text-align: center;}
+.article-container header h1 {font-size: 2.3rem; margin-bottom: 1rem; font-weight: 300;}
+.article-container header h1:after {content:''; border-bottom: 1px solid #d3d3d3; width: 10rem; display: block; margin: auto; padding: 5px;}
