@@ -14,8 +14,8 @@ const TickSound = new Audio('Plugins/client-uikit/sounds/sfx-client-nav-tick.ogg
 const ns = new Audio('Plugins/client-uikit/sounds/notification_open.ogg');
 const nsc = new Audio('Plugins/client-uikit/sounds/notification_close.ogg');
 
-const lobbyHeaderURL = "https://dl.dropboxusercontent.com/s/kc3rk3zs41dcuus/novaclient-config.json";
-const serviceStatusURL = "https://dl.dropboxusercontent.com/s/vcl5eaxw3sugdt5/notification.json";
+const lobbyHeaderURL = ".json";
+const serviceStatusURL = ".json";
 
 
 // Option Template
