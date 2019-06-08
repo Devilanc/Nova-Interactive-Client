@@ -1,4 +1,5 @@
-//This Code will 
+//This Code will Discard after 3.0 React Update
+
 $.ajaxSetup({cache:false});
 
 const PlaySound = new Audio('Plugins/client-uikit/sounds/sfx-client-play.ogg');
@@ -16,16 +17,6 @@ const nsc = new Audio('Plugins/client-uikit/sounds/notification_close.ogg');
 const lobbyHeaderURL = "https://dl.dropboxusercontent.com/s/kc3rk3zs41dcuus/novaclient-config.json";
 const serviceStatusURL = "https://dl.dropboxusercontent.com/s/vcl5eaxw3sugdt5/notification.json";
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAAUf7OIOgzkNY8c0DWg859XLijWfucL0A",
-    authDomain: "novaauth.firebaseapp.com",
-    databaseURL: "https://novaauth.firebaseio.com",
-    projectId: "novaauth",
-    storageBucket: "novaauth.appspot.com",
-    messagingSenderId: "71780441945"
-  };
-  firebase.initializeApp(config);
 
 // Option Template
 Vue.component('client-patcher', {
@@ -45,51 +36,6 @@ Vue.component('client-patcher', {
 </div>
   `
 })
-
-function ClientOpen() {  
-  bgm.pause();
-  clientui.seen = true;
-  $('#loginauth').hide();
-  $('#login-footer').hide();
-  $('#auth-content').show();
-  $('.profile-name').html(firebase.auth().currentUser.displayName);
-  $(".profile-image").attr("src", firebase.auth().currentUser.photoURL);
-  writeUserData();
-}
-
-function writeUserData(userId, name, email, imageUrl) {
-  firebase.database().ref('users/' + userId).set({
-    username: name,
-    email: email,
-    profile_picture : imageUrl
-  });
-}
-
-loadMessages();
-
-function loadMessages() {
-    var callback = function(snap) {
-        var data = snap.val();
-        console.log(snap.key, data.name, data.text);
-    };
-
-    firebase.database().ref('/messages/').limitToLast(12).on('child_added', callback);
-    firebase.database().ref('/messages/').limitToLast(12).on('child_changed', callback);
-}
-
-// Saves a new message on the Firebase DB.
-function saveMessage(messageText) {
-  // Add a new message entry to the Firebase Database.
-  return firebase.database().ref('/messages/').push({
-    name: getUserName(),
-    text: messageText,
-    profilePicUrl: getProfilePicUrl()
-  }).catch(function(error) {
-    console.error('Error writing new message to Firebase Database', error);
-  });
-}
-
-
 
 var clientui = new Vue({
     el:'#container',
@@ -113,8 +59,6 @@ var clientui = new Vue({
     },
     beforeMount(){
       this.loading = false;
-      this.loginMusicPlay()
-      this.loginValidation()
     },
     created() {
       this.server_notification()
@@ -129,57 +73,6 @@ var clientui = new Vue({
       })
     },
     methods: {
-      loginMusicPlay: function(){  
-        bgm.play();
-        bgm.addEventListener('ended', function() {
-          this.currentTime = 0;
-          this.play();
-        }, false);
-      },
-      loginScreenDisable: function() {
-        clientui.seen = true;
-        bgm.pause();
-        alert(firebase.auth().currentUser);
-      },
-      loginMusicDisable: function(event) {
-        if(event.target.checked) {
-          bgm.pause();
-        }else {
-          bgm.play();
-        }
-      },
-      loginValidation: function() {
-        var loginArea = document.getElementById("client-email");
-        loginArea.onkeypress=function(loginArea) {
-          if(this.value.length >= 1) {
-          } else {
-            document.getElementById('client-login').className('disabled');
-          }
-        }
-      },
-      loginBtn: function() {
-        loginsound.play();
-        var loginfail = new Audio('Plugins/client-login/sounds/client-login-disabled.ogg');
-        var emailField = $('#client-email').val();
-        var pwdField = $('#client-password').val();
-        $("#client-message").html("<p style='color:#d3d3d3;font-weight:bold'>인증중...</p>");
-        $('#login-spinner').css('display', 'block');
-        $('#client-login').hide();
-        $('.login-form').hide();
-
-        firebase.auth().signInWithEmailAndPassword(emailField, pwdField).then(function() {
-          $("#client-message").html("<p style='color:#d3d3d3;font-weight:bold'>접속중...</p>");
-          setInterval(ClientOpen,8000);
-          }).catch(function(error) {
-          if(error != null) {
-            $('#login-spinner').hide();
-            $('.login-form').show();
-            $('#client-login').show();
-            $("#client-message").html(error.message);
-              return;
-          }
-      });
-      },
       serviceStatusData: function() {
         var self = this;
         $.get( serviceStatusURL, function( data ) {  var ssd = JSON.parse(data); self.service_status = ssd.notifications;
