@@ -1,0 +1,12 @@
+{
+  "HOME": "/",
+  "OVERVIEW": "/overview",
+  "GUIDE": "/guide/",
+  "UNITS": "/guide/units/",
+  "BLDGS": "/guide/bldgs/",
+  "SUNIT": "/guide/spec/",
+  "techtree": "/guide/techtree/",
+  "INSIDE": "/inside",
+  "UPDATENOTES": "/latest-release-note",
+  "Qna": "/QnA"
+}
