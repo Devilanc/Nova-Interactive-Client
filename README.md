@@ -4,4 +4,4 @@ Nova Interactive Game&Social Client
 
 Build with Electron
 
-Copyright 2016-2020
+Copyright 2016-2021
