@@ -43,7 +43,6 @@ autoUpdater.on("update-not-available", function (event) {
 
 autoUpdater.on("update-downloaded", () => {
   sendStatusToWindow('Update downloaded.');
-  dialog.showErrorBox('업데이트 알림', '최신 버전이 적용되었습니다. 버튼을 눌러 클라이언트를 재시작하세요.')
   autoUpdater.quitAndInstall();
 })
 autoUpdater.on("error", (error) => {
@@ -110,7 +109,7 @@ app.on('ready', async () => {
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
-  // @TODO: Use 'ready-to-show' event
+  // @TODO: 'ready-to-show' event 사용
   //        https://github.com/electron/electron/blob/master/docs/api/browser-window.md#using-ready-to-show-event
   mainWindow.webContents.on('did-finish-load', () => {
     if (!mainWindow) {
@@ -128,7 +127,7 @@ app.on('ready', async () => {
     mainWindow = null;
   });
 
-  // Remove this if your app does not use auto updates
+  // 자동 업데이트를 쓰지 않을경우 제거
   // eslint-disable-next-line
   new AppUpdater();
 });
